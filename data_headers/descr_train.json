@@ -1,0 +1,44 @@
+{
+    "description": "Table of training data",
+    "columns": {
+        "PassengerId": "The key of the table",
+        "Survived": "Yes or No, Classification task",
+        "Pclass": "Class of the ticket",
+        "Name": "Name of the person",
+        "Sex": "Gender of the person",
+        "Age": "Age of the person",
+        "SibSp": "Number of siblings or spouses in the titanic",
+        "Parch": "Number of parents or children in the titanic",
+        "Ticket": "The ticket number",
+        "Fare": "Passenger fare",
+        "Cabin": "Cabin number",
+        "Embarked": "What port of embarking"
+    },
+    "meta": {
+        "name": "titanic_train",
+        "task_type": "binary_classification",
+        "features": {
+            "numeric": [
+                "SibSp",
+                "Parch",
+                "Fare"
+            ],
+            "categorical": [
+                "Sex",
+                "Cabin",
+                "Embarked",
+                "Pclass"
+            ],
+            "bucketized": [
+                "Age"
+            ],
+            "droppable": [
+                "Name",
+                "Ticket"
+            ],
+            "id": "PassengerId"
+        },
+        "target_column": "Survived",
+        "target_type": "binary"
+    }
+}
